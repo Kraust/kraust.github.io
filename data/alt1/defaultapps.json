@@ -23,5 +23,10 @@
     "folder": "",
     "name": "XpMeter",
     "url": "https://runeapps.org/apps/alt1/xpmeter/appconfig.json"
+  },
+  {
+    "folder": "",
+    "name": "DgKey",
+    "url": "https://runeapps.org/apps/alt1/dgkey/appconfig.json"
   }
 ]
