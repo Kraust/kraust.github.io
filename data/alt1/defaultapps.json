@@ -28,5 +28,10 @@
     "folder": "",
     "name": "DgKey",
     "url": "https://runeapps.org/apps/alt1/dgkey/appconfig.json"
+  },
+  {
+    "folder": "",
+    "name": "Necro Job Gauge",
+    "urk": "https://nadyanayme.github.io/NyusNecroJobGauge/dist/appconfig.json"
   }
 ]
