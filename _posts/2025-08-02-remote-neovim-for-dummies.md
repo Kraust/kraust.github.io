@@ -19,7 +19,7 @@ than `--listen` and `--server` do.
 To begin using neovim as a server, you just need to invoke it with the
 `--server` flag. The `--server` option can take a UNIX socket or an HTTP
 listening address. For simplicity's sake, I always use an HTTP address.
-G
+
 ```bash
 nvim --listen http://127.0.0.1:9000
 ```
@@ -29,8 +29,8 @@ nvim --listen http://127.0.0.1:9000
 # Setting Up the Client
 
 In a separate window, you can start neovim with the `--server` and
-`--remote-ui` flags, specifying the address you're listening to in
-[Setting Up the Server](#Setting Up the Server).
+`--remote-ui` flags, specifying the address you're listening on
+for the `--server` argument.
 
 ```bash
 nvim --server 127.0.0.1:9000 --remote-ui
@@ -62,9 +62,9 @@ have it set, but `--listen` will not.
 
 # Running the Server as a Service
 
-You can easily set up neovim as a user systemd script (or as a Scheduled task
-in Windows). Here's an example systemd script I use to remotely attach to VMs
-in my public LAN.
+You can easily set up neovim as a user systemd unit (or as a Scheduled task
+in Windows). Here's an example systemd unit I use to remotely attach to VMs
+in my local LAN.
 
 ```systemd
 # /etc/systemd/user/nvimd.service
