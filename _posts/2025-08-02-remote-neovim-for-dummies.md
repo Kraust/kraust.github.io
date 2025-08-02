@@ -17,7 +17,7 @@ than `--listen` and `--server` do.
 # Setting Up the Server
 
 To begin using neovim as a server, you just need to invoke it with the
-`--server` flag. The `--server` option can take a UNIX socket or an HTTP
+`--server` flag. The `--server` flag can take a UNIX socket or an HTTP
 listening address. For simplicity's sake, I always use an HTTP address.
 
 ```bash
