@@ -27,7 +27,7 @@ Tangent - Way back when the feature was new, I even
 While cute at the time, I don't find tools like this very helpful as they
 distract from the workflow defined in my session file.
 
-# So What is so Special About `:terminal`?
+# So What is So Special About `:terminal`?
 
 `:terminal` is something I am passionate about because my day revolves around
 its existence. I don't think there's any singular feature added to vim or
