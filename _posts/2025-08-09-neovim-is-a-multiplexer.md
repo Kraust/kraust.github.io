@@ -54,18 +54,8 @@ available.
 
 At this point, you might want to read `:help terminal`, but I will go into
 details about some common scenarios that I find useful. While the Neovim
-developers provide some useful alternative keybinds, I want to propose my own
-as a user of terminal buffers for nearly a decade now.
-
-## `:terminal` Can be Used to Spawn More Than Just Your Primary Shell
-
-You can execute arbitrary commands with `:terminal`. For example, I can run
-`:terminal sudo dmesg -w` to spawn dmesg in my current buffer. Exiting dmesg
-with `<C-c>` closes the buffer.
-
-![terminal-5](assets/img/terminal-5.png ":terminal sudo dmesg -w")
-
-Note: It's only a warning - my kernel did not crash.
+developers provide some useful alternative keybinds, I want to propose at least
+one as a user of terminal buffers for nearly a decade now.
 
 # Escaping Terminal Mode
 
@@ -84,6 +74,16 @@ want to run vim inside of vim (like over an ssh session) or even in cases where
 vim is not available. This can extend to other TUI applications which may have
 a use for esc. A simple way of solving this is to use <esc><esc> instead of
 just <esc> to exit the buffer.
+
+# `:terminal` Can be Used to Spawn More Than Just Your Primary Shell
+
+You can execute arbitrary commands with `:terminal`. For example, I can run
+`:terminal sudo dmesg -w` to spawn dmesg in my current buffer. Exiting dmesg
+with `<C-c>` closes the buffer.
+
+![terminal-5](assets/img/terminal-5.png ":terminal sudo dmesg -w")
+
+Note: It's only a warning - my kernel did not crash.
 
 # Onto Actual Multiplexing.
 
