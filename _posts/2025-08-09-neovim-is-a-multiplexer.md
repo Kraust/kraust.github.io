@@ -7,7 +7,7 @@ description: Why use two tools when you only need one?
 
 # Introduction
 
-In my [last](/posts/remote-Neovim-for-dummies) post, I detailed
+In my [last](/posts/remote-neovim-for-dummies) post, I detailed
 the use of Neovim's client / server architecture with respect to remotely
 accessing an instance of Neovim. I don't think I did an adequate job at
 expressing the "why", and that was partially intentional. There are a series of
