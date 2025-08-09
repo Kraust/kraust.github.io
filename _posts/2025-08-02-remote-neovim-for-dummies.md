@@ -5,7 +5,7 @@ tags: [neovim]     # TAG names should always be lowercase
 description: What if I told you that you didn't need tmux?
 ---
 
-# Introduction
+## Introduction
 
 What if I told you there was a quick and easy way to remote into an instance
 of neovim without any additional dependencies? For quite some time there has
@@ -14,7 +14,7 @@ in favor of other options such as [tmux](https://github.com/tmux/tmux) or
 [Zellij](https://zellij.dev/). I'm sure even GNU Screen gets talked about more
 than `--listen` and `--server` do.
 
-# Setting Up the Server
+## Setting Up the Server
 
 To begin using neovim as a server, you just need to invoke it with the
 `--server` flag. The `--server` flag can take a UNIX socket or an HTTP
@@ -26,7 +26,7 @@ nvim --listen http://127.0.0.1:9000
 
 ![tui-server-1](assets/img/tui-server-1.png "Starting the TUI Server")
 
-# Setting Up the Client
+## Setting Up the Client
 
 In a separate window, you can start neovim with the `--server` and
 `--remote-ui` flags, specifying the address you're listening on
@@ -47,7 +47,7 @@ allow you to resume editing where you left off and exiting the remote server
 can be done by invoking `:qall` like normal.
 
 
-# Making the Server Headless
+## Making the Server Headless
 
 Making the server headless is as easy as adding the `--headless` option to
 neovim.
@@ -60,7 +60,7 @@ NOTE: You may need to `:set termguicolors` if you don't have it set. Certain
 plugins and [Neovide](https://neovide.dev/) will do this for you if you don't
 have it set, but `--listen` will not.
 
-# Running the Server as a Service
+## Running the Server as a Service
 
 You can easily set up neovim as a user systemd unit (or as a Scheduled task
 in Windows). Here's an example systemd unit I use to remotely attach to VMs
@@ -89,7 +89,7 @@ You can enable this service with `sudo systemctl daemon-reload` and
 `systemctl --user enable nvimd.service` remember to make user systemd units 
 persistent after logout with `sudo loginctl enable-linger $USER`.
 
-# Conclusion
+## Conclusion
 
 And that is it. In future posts, I plan on addressing subjects like how to
 best use `:terminal`, improving this workflow with

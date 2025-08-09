@@ -5,7 +5,7 @@ tags: [neovim]     # TAG names should always be lowercase
 description: Why use two tools when you only need one?
 ---
 
-# Introduction
+## Introduction
 
 In my [last](/posts/remote-neovim-for-dummies) post, I detailed
 the use of Neovim's client / server architecture with respect to remotely
@@ -27,7 +27,7 @@ Tangent - Way back when the feature was new, I even
 While cute at the time, I don't find tools like this very helpful as they
 distract from the workflow defined in my session file.
 
-# So What is So Special About `:terminal`?
+## So What is So Special About `:terminal`?
 
 `:terminal` is something I am passionate about because my day revolves around
 its existence. I don't think there's any singular feature added to vim or
@@ -57,7 +57,7 @@ details about some common scenarios that I find useful. While the Neovim
 developers provide some useful alternative keybinds, I want to propose at least
 one as a user of terminal buffers for nearly a decade now.
 
-# Escaping Terminal Mode
+## Escaping Terminal Mode
 
 At some point you'll want to escape the terminal. The default keybinding for
 this is `<C-\><C-n>`. I don't find this very intuitive so I have a keymap set
@@ -67,7 +67,7 @@ up to `<esc><esc>`
 vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { silent = true })
 ```
 
-## Why `<esc><esc>` and not `<esc>`?
+### Why `<esc><esc>` and not `<esc>`?
 
 A common problem encountered when using Terminal Buffers is that the user may
 want to run vim inside of vim (like over an ssh session) or even in cases where
@@ -75,7 +75,7 @@ vim is not available. This can extend to other TUI applications which may have
 a use for esc. A simple way of solving this is to use `<esc><esc>` instead of
 just `<esc>` to exit the buffer.
 
-# `:terminal` Can be Used to Spawn More Than Just Your Primary Shell
+## `:terminal` Can be Used to Spawn More Than Just Your Primary Shell
 
 You can execute arbitrary commands with `:terminal`. For example, I can run
 `:terminal sudo dmesg -w` to spawn dmesg in my current buffer. Exiting dmesg
@@ -85,7 +85,7 @@ with `<C-c>` closes the buffer.
 
 Note: It's only a warning - my kernel did not crash.
 
-# Onto Actual Multiplexing.
+## Onto Actual Multiplexing.
 
 Going back into Command Mode, (in my case `<esc><esc>`) I can now split my
 window (e.g. `:sp`) and open up my `init.vim` (e.g. `e ~/.config/init.vim`).
@@ -106,11 +106,11 @@ That will be explored in a future post.
 
 ![terminal-4](assets/img/terminal-4.png "Basic Multiplexing")
 
-# What are the Downsides?
+## What are the Downsides?
 
 Like with all things, there are of course downsides.
 
-## Lack of Terminal Softwrap
+### Lack of Terminal Softwrap
 
 There is an [open github issue](https://github.com/neovim/neovim/issues/30117)
 around being able to soft wrap terminal buffers. Right now if you want to yank
@@ -120,7 +120,7 @@ very annoying if you're like me and tail a lot of logs and want to yank output.
 There are currently several hacks and workarounds for this issue, but I usually
 just fix up the yanked lines manually.
 
-## The Strong Mindshare of Competing Products.
+### The Strong Mindshare of Competing Products.
 
 As addressed in my previous post, both [tmux](https://github.com/tmux/tmux) and
 [Zellij](https://zellij.dev/) have significant mindshare in the neovim
@@ -135,7 +135,7 @@ long time ago I found `tmux` clunky and troublesome to use. Things may have
 changed since the 2018/2019 timeframe, and I may be just like those people
 asking me and the community "Why `:terminal`".
 
-## Potential Lack of Features
+### Potential Lack of Features
 
 When discussing the use of neovim as a terminal multiplexer I ran into a
 story of a user who wanted to display images in their terminal. This isn't
@@ -152,7 +152,7 @@ don't blame anyone for not choosing Neovim as their multiplexer because it
 couldn't display pictures, and that extends to every other feature I don't
 regularly use or may not be aware of.
 
-# Conclusion
+## Conclusion
 
 I hope that this introduction to multiplexing within Neovim was informative,
 and that we're going into a direction of understanding why Neovim can be used
