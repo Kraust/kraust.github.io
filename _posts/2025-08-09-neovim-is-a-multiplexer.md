@@ -127,7 +127,7 @@ As addressed in my previous post, both [tmux](https://github.com/tmux/tmux) and
 community. In the past, I have tried to explain why these tools fail to solve
 the problem that terminal buffers solve (one tool is easier to use than two)
 but as many people entering the community learn these multiplexers before they
-learn buffer management (and `:terminal`) they don't see a desire to abandon
+learn buffer management (and `:terminal`), and they don't see a desire to abandon
 things they already know. Over the years I've felt it necessary to try and
 evangelize `:terminal` to try and win these people over, but the reality is if
 existing tooling works for you - keep on using it. I use `:terminal` because a
