@@ -73,7 +73,7 @@ A common problem encountered when using Terminal Buffers is that the user may
 want to run vim inside of vim (like over an ssh session) or even in cases where
 vim is not available. This can extend to other TUI applications which may have
 a use for esc. A simple way of solving this is to use `<esc><esc>` instead of
-just <esc> to exit the buffer.
+just `<esc>` to exit the buffer.
 
 # `:terminal` Can be Used to Spawn More Than Just Your Primary Shell
 
